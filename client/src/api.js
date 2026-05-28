@@ -3,9 +3,7 @@
 // Instead of writing fetch() calls scattered everywhere, we define them here
 // and import them wherever we need them. Easy to find, easy to change.
 
-const BASE_URL = "http://tamid-blog-env.eba-sxszu2wa.us-east-2.elasticbeanstalk.com";
-
-// ─── AUTH HELPERS ────────────────────────────────────────────────────────────
+const BASE_URL = "https://corsproxy.io/?http://tamid-blog-env.eba-sxszu2wa.us-east-2.elasticbeanstalk.com";// ─── AUTH HELPERS ────────────────────────────────────────────────────────────
 
 // Save the JWT token to localStorage so the user stays logged in across page refreshes
 export function saveToken(token) {
