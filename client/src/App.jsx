@@ -5,6 +5,7 @@ import Register from './pages/Register'
 import MyPosts from './pages/MyPosts'
 import Navbar from './components/Navbar'
 import { useAuth } from './context/AuthContext'
+import './App.css'
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth()
