@@ -3,3 +3,4 @@ venv/
 __pycache__/
 server/.ebextensions/python.config
 server/.ebextensions/
+**/__pycache__/
