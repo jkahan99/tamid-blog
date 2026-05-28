@@ -4,7 +4,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import MyPosts from './pages/MyPosts'
 import Navbar from './components/Navbar'
-import { useAuth } from './context/AuthContext'
+import { AuthProvider, useAuth } from './context/AuthContext'
 import './App.css'
 
 function ProtectedRoute({ children }) {
@@ -18,20 +18,24 @@ function ProtectedRoute({ children }) {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/my-posts"
-          element={
-            <ProtectedRoute>
-              <MyPosts />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+      <AuthProvider>
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/my-posts"
+              element={
+                <ProtectedRoute>
+                  <MyPosts />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </main>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
