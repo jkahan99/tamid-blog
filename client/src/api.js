@@ -3,7 +3,7 @@
 // Instead of writing fetch() calls scattered everywhere, we define them here
 // and import them wherever we need them. Easy to find, easy to change.
 
-const BASE_URL = "http://localhost:8000"; // Change this if your backend runs on a different port
+const BASE_URL = "http://tamid-blog-env.eba-sxszu2wa.us-east-2.elasticbeanstalk.com";
 
 // ─── AUTH HELPERS ────────────────────────────────────────────────────────────
 
